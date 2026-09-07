@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questionário | Projeto Integrador - Eurofarma</title>
+  <style>
+    :root{
+      --primary:#0A4D8C;
+      --primary-2:#0F6FB8;
+      --bg:#F5F8FC;
+      --card:#FFFFFF;
+      --text:#1E293B;
+      --muted:#64748B;
+      --border:#DCE5EF;
+      --soft:#EDF5FB;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#EEF5FB 0%,#F8FAFC 45%,#F5F8FC 100%);
+      color:var(--text);
+    }
+    .container{
+      width:min(900px,calc(100% - 32px));
+      margin:40px auto 70px;
+    }
+    .hero{
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      border-radius:24px;
+      padding:42px;
+      color:#fff;
+      box-shadow:0 18px 50px rgba(10,77,140,.18);
+    }
+    .tag{
+      display:inline-block;
+      background:rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.25);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:16px;
+    }
+    h1{margin:0 0 12px;font-size:clamp(28px,5vw,44px);line-height:1.08}
+    .hero p{margin:0;max-width:720px;font-size:16px;line-height:1.65;color:rgba(255,255,255,.92)}
+    .notice{
+      margin-top:18px;padding:14px 16px;border-radius:14px;
+      background:rgba(255,255,255,.12);font-size:14px;line-height:1.5
+    }
+    .progress-wrap{margin:24px 0 0;display:flex;align-items:center;gap:12px}
+    .progress{flex:1;height:8px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden}
+    .progress-bar{height:100%;width:0%;background:#fff;transition:.25s ease}
+    .progress-text{font-size:13px;font-weight:700;min-width:86px;text-align:right}
+    form{margin-top:24px}
+    .section{
+      background:var(--card);border:1px solid var(--border);border-radius:20px;
+      padding:28px;margin-top:18px;box-shadow:0 10px 28px rgba(15,23,42,.05)
+    }
+    .section-title{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+    .number{
+      width:36px;height:36px;border-radius:12px;background:var(--soft);
+      color:var(--primary);font-weight:800;display:flex;align-items:center;justify-content:center
+    }
+    h2{margin:0;font-size:20px}
+    .field{margin-top:20px}
+    label{display:block;font-weight:700;margin-bottom:8px;line-height:1.45}
+    .hint{margin:-2px 0 10px;color:var(--muted);font-size:13px;line-height:1.45}
+    input,textarea{
+      width:100%;border:1px solid var(--border);border-radius:12px;
+      padding:14px 15px;font:inherit;color:var(--text);background:#fff;outline:none;transition:.2s ease
+    }
+    textarea{min-height:118px;resize:vertical}
+    input:focus,textarea:focus{border-color:var(--primary-2);box-shadow:0 0 0 4px rgba(15,111,184,.10)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    button{
+      border:0;border-radius:12px;padding:14px 18px;font-size:15px;font-weight:700;
+      cursor:pointer;transition:.2s ease
+    }
+    .primary{background:var(--primary);color:#fff;min-width:190px}
+    .primary:hover{background:#083f73}
+    .secondary{background:#EEF2F6;color:#334155}
+    .secondary:hover{background:#E2E8F0}
+    .privacy{
+      margin-top:14px;color:var(--muted);font-size:12px;line-height:1.5
+    }
+    .footer{margin-top:20px;text-align:center;color:var(--muted);font-size:12px;line-height:1.5}
+    @media (max-width:700px){
+      .hero{padding:28px 22px}.section{padding:22px 18px}.grid{grid-template-columns:1fr}
+      .actions{flex-direction:column}button{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <span class="tag">Projeto Integrador • Marketing</span>
+      <h1>Questionário rápido para a gestora</h1>
+      <p>
+        O objetivo é compreender um desafio ou oportunidade da área de marketing da Eurofarma
+        para fundamentar um trabalho acadêmico. As respostas podem ser breves e não precisam
+        incluir informações confidenciais.
+      </p>
+      <div class="notice">Tempo estimado de resposta: 5 a 8 minutos.</div>
+      <div class="progress-wrap">
+        <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+        <div class="progress-text" id="progressText">0% concluído</div>
+      </div>
+    </section>
+
+    <form id="questionario"
+          action="https://formsubmit.co/thamiresbrasil23@gmail.com"
+          method="POST">
+
+      <input type="hidden" name="_subject" value="Nova resposta - Questionário Projeto Integrador Eurofarma">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://thamiresbrasil23-creator.github.io/PROJETOINTEGRADOR/obrigada.html">
+      <input type="text" name="_honey" style="display:none">
+
+      <section class="section">
+        <div class="section-title">
+          <div class="number">1</div><h2>Identificação</h2>
+        </div>
+        <div class="grid">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" name="Nome" type="text" placeholder="Digite seu nome">
+          </div>
+          <div class="field">
+            <label for="cargo">Cargo / área</label>
+            <input id="cargo" name="Cargo / área" type="text" placeholder="Ex.: Marketing, Comunicação...">
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <div class="number">2</div><h2>Desafio</h2>
+        </div>
+
+        <div class="field">
+          <label for="q1">Qual é hoje o principal desafio ou oportunidade da área de marketing da Eurofarma?</label>
+          <div class="hint">Pode envolver comunicação, engajamento, posicionamento, canais digitais, público, concorrência ou outro ponto relevante.</div>
+          <textarea id="q1" name="Principal desafio ou oportunidade" required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="q2">Em qual público, canal ou área essa situação aparece com mais força?</label>
+          <textarea id="q2" name="Público, canal ou área mais afetada" required></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <div class="number">3</div><h2>Sintomas</h2>
+        </div>
+
+        <div class="field">
+          <label for="q3">Quais sinais ou evidências mostram que esse desafio realmente existe?</label>
+          <div class="hint">Ex.: baixo alcance, pouca interação, dificuldade de conversão, dificuldade de atingir um público específico, percepção da equipe ou indicadores internos.</div>
+          <textarea id="q3" name="Sinais ou evidências" required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="q4">A equipe já tentou alguma ação para melhorar essa situação? Qual foi o resultado?</label>
+          <textarea id="q4" name="Ações já realizadas"></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <div class="number">4</div><h2>Investigação e objetivo</h2>
+        </div>
+
+        <div class="field">
+          <label for="q5">O que ainda precisa ser melhor compreendido ou investigado sobre esse desafio?</label>
+          <textarea id="q5" name="O que ainda precisa ser investigado" required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="q6">Que resultado ou melhoria a área de marketing gostaria de alcançar?</label>
+          <div class="hint">Essa resposta ajudará a definir o objetivo do Projeto Integrador.</div>
+          <textarea id="q6" name="Resultado ou melhoria esperada" required></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="primary" type="submit">Enviar respostas</button>
+          <button class="secondary" type="reset">Limpar formulário</button>
+        </div>
+        <div class="privacy">
+          Ao enviar, as respostas serão encaminhadas para o e-mail responsável pelo Projeto Integrador.
+        </div>
+      </section>
+    </form>
+
+    <div class="footer">Questionário acadêmico para apoio ao desenvolvimento de Projeto Integrador.</div>
+  </main>
+
+  <script>
+    const form = document.getElementById('questionario');
+    const requiredFields = [...form.querySelectorAll('[required]')];
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+
+    function atualizarProgresso(){
+      const preenchidos = requiredFields.filter(el => el.value.trim().length > 0).length;
+      const percentual = Math.round((preenchidos / requiredFields.length) * 100);
+      progressBar.style.width = percentual + '%';
+      progressText.textContent = percentual + '% concluído';
+    }
+    form.addEventListener('input', atualizarProgresso);
+    form.addEventListener('reset', () => setTimeout(atualizarProgresso, 0));
+    atualizarProgresso();
+  </script>
+</body>
+</html>
